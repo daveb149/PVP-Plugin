@@ -1,0 +1,13 @@
+name: KitPVP
+version: 2.69
+main: pvpplugin.PvPPlugin.kitpvp.Kitpvp
+
+commands:
+  kitpvp:
+    description: Spawns Kit
+  gamemaster:
+    description: Changes into Gamemaster
+  ratchet:
+    description: Plays a particle effect
+
+
