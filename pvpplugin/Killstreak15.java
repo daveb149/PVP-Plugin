@@ -1,4 +1,4 @@
-package pvpplugin.PvPPlugin.kitpvp;
+package pvpplugin;
 
 import org.bukkit.entity.Snowball;
 import org.bukkit.Bukkit;

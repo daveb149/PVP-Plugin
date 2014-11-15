@@ -1,6 +1,6 @@
-package pvpplugin.PvPPlugin.kitpvp;
+package pvpplugin;
 
-import static pvpplugin.PvPPlugin.kitpvp.Kitpvp.getInstance;
+import static pvpplugin.Kitpvp.getInstance;
 import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
