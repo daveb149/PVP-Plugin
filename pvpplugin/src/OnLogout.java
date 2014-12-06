@@ -1,4 +1,4 @@
-package pvpplugin;
+package src;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

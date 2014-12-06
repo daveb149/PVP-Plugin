@@ -1,4 +1,4 @@
-package pvpplugin;
+package src;
 
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;

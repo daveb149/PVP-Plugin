@@ -1,5 +1,5 @@
 
-package pvpplugin;
+package src;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

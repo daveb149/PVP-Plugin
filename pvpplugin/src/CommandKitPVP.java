@@ -1,4 +1,4 @@
-package pvpplugin;
+package src;
 
 import static pvpplugin.Kitpvp.getInstance;
 import org.bukkit.Effect;

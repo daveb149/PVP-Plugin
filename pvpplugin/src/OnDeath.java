@@ -1,4 +1,4 @@
-package pvpplugin;
+package src;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
