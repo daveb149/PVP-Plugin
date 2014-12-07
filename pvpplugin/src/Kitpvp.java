@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Kitpvp extends JavaPlugin {
 	public static Plugin plugin;
-
+        @Override
 	public void onEnable() {
 		plugin = this;
 		getLogger().info("Plugin Initialized");
@@ -19,7 +19,7 @@ public class Kitpvp extends JavaPlugin {
 		Bukkit.getPluginManager().registerEvents(new OnLogout(), this);
                 Bukkit.getPluginManager().registerEvents(new OnPlayerInteract(), this);
                 Bukkit.getPluginManager().registerEvents(new Hunger(), this);
-		
+		Bukkit.getPluginManager().registerEvents(new Kits(), this);
 		
 		
 		CommandKitPVP cmds = new CommandKitPVP();

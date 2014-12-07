@@ -1,13 +1,13 @@
 package src;
 
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.*;
+import org.bukkit.inventory.ItemStack;
 
 public class Killstreak7 implements Listener {
 
@@ -19,8 +19,8 @@ public class Killstreak7 implements Listener {
 		int reqlevel = event.getNewLevel();
 		if (reqlevel == 7){
 
-			player.addPotionEffect(new PotionEffect(
-					PotionEffectType.INCREASE_DAMAGE, 500, 1));
+			player.getInventory().remove(new ItemStack(Material.IRON_SWORD));
+			player.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD));
 			Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName()
 					+ ChatColor.GRAY + " is on a 7 killstreak!");
 					return true;

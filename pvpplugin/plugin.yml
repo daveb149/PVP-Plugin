@@ -1,6 +1,6 @@
 name: KitPVP
 version: 2.69
-main: pvpplugin.PvPPlugin.kitpvp.Kitpvp
+main: src.Kitpvp
 
 commands:
   kitpvp:

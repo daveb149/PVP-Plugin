@@ -2,12 +2,12 @@ package src;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.event.player.*;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class Killstreak9 implements Listener {
 
@@ -19,8 +19,8 @@ public class Killstreak9 implements Listener {
 		int reqlevel = event.getNewLevel();
 		if (reqlevel == 9){
 
-            ItemStack diamchestplate = new ItemStack(Material.DIAMOND_CHESTPLATE);
-            player.getInventory().setChestplate(diamchestplate);
+                    
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 500, 1));
 			Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName()
 					+ ChatColor.GRAY + " is on a 9 killing-spree!");
 					return true;

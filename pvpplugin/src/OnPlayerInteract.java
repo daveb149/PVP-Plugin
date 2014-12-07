@@ -1,5 +1,6 @@
 package src;
 
+import java.util.ArrayList;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -10,6 +11,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class OnPlayerInteract implements Listener {
     
@@ -31,5 +34,28 @@ public class OnPlayerInteract implements Listener {
 
         }
 
+    }
+    static {
+        ItemStack warrior = new ItemStack(Material.IRON_CHESTPLATE, 1);
+        ItemStack hulk = new ItemStack(Material.DIAMOND_HELMET, 1);
+        
+        ItemMeta w = warrior.getItemMeta();
+        ItemMeta h = hulk.getItemMeta();
+        
+        ArrayList<String> lore = new ArrayList<>();
+        
+        w.setDisplayName(ChatColor.RED + "Warrior");
+        h.setDisplayName(ChatColor.RED + "Hulk");
+        lore.add(ChatColor.AQUA + "Left click to select kit.");
+        
+        
+        w.setLore(lore);
+        h.setLore(lore);
+        
+        warrior.setItemMeta(w);
+        hulk.setItemMeta(h);
+        
+        kitSelector.setItem(0, warrior);
+        kitSelector.setItem(2, hulk);
     }
 }
