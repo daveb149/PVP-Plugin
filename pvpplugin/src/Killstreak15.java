@@ -11,38 +11,38 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.event.player.*;
+import static src.Misc.prefix;
 
 public class Killstreak15 implements Listener {
 
-	@SuppressWarnings("deprecation")
-	@EventHandler
-	public void onSnowBall(EntityDamageByEntityEvent event) {
+    @SuppressWarnings("deprecation")
+    @EventHandler
+    public void onSnowBall(EntityDamageByEntityEvent event) {
 
-		if (event.getDamager() instanceof Snowball
-				&& event.getEntity() instanceof Player) {
-			Player player = (Player) event.getEntity();
-			player.damage(20);
-			player.getLocation().getWorld().createExplosion(player.getLocation(), 0.0F);
-			player.playSound(player.getLocation(), Sound.CHICKEN_EGG_POP, 10, 1);
-			
-		}
-	}
+        if (event.getDamager() instanceof Snowball
+                && event.getEntity() instanceof Player) {
+            Player player = (Player) event.getEntity();
+            player.damage(20.0);
+            player.getLocation().getWorld().createExplosion(player.getLocation(), 0.0F);
+            player.playSound(player.getLocation(), Sound.CHICKEN_EGG_POP, 10, 1);
 
-	@EventHandler
-	public boolean PlayerLevelChangeEvent(PlayerLevelChangeEvent event) {
-		int reqlevel = event.getNewLevel();
-		if (reqlevel == 15) {
+        }
+    }
 
-			Player player = event.getPlayer();
+    @EventHandler
+    public boolean PlayerLevelChangeEvent(PlayerLevelChangeEvent event) {
+        int reqlevel = event.getNewLevel();
+        if (reqlevel == 15) {
 
-			ItemStack snowball = new ItemStack(Material.SNOW_BALL, 5);
-			player.getInventory().addItem(snowball);
-			Bukkit.broadcastMessage(ChatColor.BLUE + player.getDisplayName()
-					+ ChatColor.GRAY + " is on a 15 killing-rampage!");
-			return true;
+            Player player = event.getPlayer();
 
-		}
-		return false;
-	}
+            ItemStack snowball = new ItemStack(Material.SNOW_BALL, 5);
+            player.getInventory().addItem(snowball);
+            Bukkit.broadcastMessage(prefix + ChatColor.BLUE + player.getDisplayName() + ChatColor.GRAY + " is on a 15 killing-rampage!");
+            return true;
+
+        }
+        return false;
+    }
 
 }

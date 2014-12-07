@@ -1,13 +1,12 @@
-name: KitPVP
-version: 2.69
+name: PVP-Plugin
+version: 3
 main: src.Kitpvp
 
 commands:
-  kitpvp:
-    description: Spawns Kit
   gamemaster:
-    description: Changes into Gamemaster
+    description: Changes into Gamemaster.
   ratchet:
-    description: Plays a particle effect
-
+    description: Plays a particle effect.
+  kits:
+    description: Opens the kits GUI.
 
